@@ -87,10 +87,11 @@ def prim1b():
         print(f"A entrada '{entrada}' é {'aceita' if resultado else 'rejeitada'} pelo automato.")
 
 def prim1c():
-    estados = {'q0', 'q1', 'q2', 'q3','q4'}
+    estados = {'q0', 'q1', 'q2', 'q3','q4', 'q5'}
     alfabeto = {'a', 'b'}
     transicoes = {
         ('q0', 'a'): 'q1',
+        ('q0', 'b'): 'q5',
         ('q1', 'a'): 'q3',
         ('q1', 'b'): 'q2',
         ('q2', 'b'): 'q2',
@@ -98,11 +99,11 @@ def prim1c():
         ('q3', 'b'): 'q4',
     }
     estado_inicial = 'q0'
-    estados_finais = {'q1','q2','q4'}
+    estados_finais = {'q1','q2','q4','q5'}
 
     automato = AutomatoFinito(estados, alfabeto, transicoes, estado_inicial, estados_finais)
     
-    entradas = ['b','aaaaaaaaaaaaaaaaaaab','aaaaab','abbbbbbbbbbbbbbbb','','aaaaaaaaabbbbbbbbb','ba','bbbbbaaaaaaa','bbbbbbb','aaaaaaaaa','babababa','baaaaaaaa']
+    entradas = ['b','a','aaaaaaaaaaaaaaaaaaab','aaaaab','abbbbbbbbbbbbbbbb','','aaaaaaaaabbbbbbbbb','ba','bbbbbaaaaaaa','bbbbbbb','aaaaaaaaa','babababa','baaaaaaaa']
     for entrada in entradas:
         resultado = automato.processa_entrada(entrada)
         print(f"A entrada '{entrada}' é {'aceita' if resultado else 'rejeitada'} pelo automato.")
