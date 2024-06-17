@@ -52,7 +52,7 @@ def prim1a():
 
     automato = AutomatoFinito(estados, alfabeto, transicoes, estado_inicial, estados_finais)
     
-    entradas = ['','aaaaaaaaaaaaaaaaaaaa','abc','ab','ac','accccccccccc','abbbbbbcccccccccccc','abbbbbbccccccccccccabbbbbbccccccccccccabbbbbbcccccccccccc','bc','c','b','cb']
+    entradas = ['','a','aaaaaaaaaaaaaaaaaaaa','abc','ab','ac','accccccccccc','abbbbbbcccccccccccc','abbbbbbaaaaccc','abbbbbbccccccccccccabbbbbbccccccccccccabbbbbbcccccccccccc','bc','c','b','cb','cbcbcbcbcb','bbbbbbbbbbbbbbbb','cccccccccccccc','bccccccccc','cbbbbbbbbbbbbbb','bcaa']
     for entrada in entradas:
         resultado = automato.processa_entrada(entrada)
         print(f"A entrada '{entrada}' é {'aceita' if resultado else 'rejeitada'} pelo automato.")
@@ -81,7 +81,7 @@ def prim1b():
 
     automato = AutomatoFinito(estados, alfabeto, transicoes, estado_inicial, estados_finais)
     
-    entradas = ['aaa','aaabbbbbbbbbbbbb','aaabbbbbcccccccccc','aaabbbbccccbcbcbcbbcbcbcbcbc','aaacbcbcbcbcb','bcbcbcbcbcaaa','cccccccaaa','bbbbbbbbccccccaaa','bbbbbbbbbbbb','ccccccccccc','bccccbbb','aa','a','abc','acb','','aaaaaabccc','aaaaabbbccc']
+    entradas = ['aaa','aaabbbbbbbbbbbbb','aaabbbbbcccccccccc','aaab','aaac','aaabbbbccccbcbcbcbbcbcbcbcbc','aaacbcbcbcbcb','bcbcbcbcbcaaa','cccccccaaa','bbbbbbbbccccccaaa','bbbbbbbbbbbb','ccccccccccc','bccccbbb','aa','a','abc','acb','','aaaaaabccc','aaaaabbbccc']
     for entrada in entradas:
         resultado = automato.processa_entrada(entrada)
         print(f"A entrada '{entrada}' é {'aceita' if resultado else 'rejeitada'} pelo automato.")
@@ -103,7 +103,7 @@ def prim1c():
 
     automato = AutomatoFinito(estados, alfabeto, transicoes, estado_inicial, estados_finais)
     
-    entradas = ['b','a','aaaaaaaaaaaaaaaaaaab','aaaaab','abbbbbbbbbbbbbbbb','','aaaaaaaaabbbbbbbbb','ba','bbbbbaaaaaaa','bbbbbbb','aaaaaaaaa','babababa','baaaaaaaa']
+    entradas = ['b','a','ab','aab','abb','aaaaab','aaaaaaaaaaaaaaaaaaab','aaaaaab','abbbbbbbbbbbbbbbb','','aaaaaaaaabbbbbbbbb','ba','bbbbbaaaaaaa','bbbbbbb','aaaaaaaaa','babababa','baaaaaaaa','abababab','bbbbbbaaaaa','aaabbb','avx']
     for entrada in entradas:
         resultado = automato.processa_entrada(entrada)
         print(f"A entrada '{entrada}' é {'aceita' if resultado else 'rejeitada'} pelo automato.")
